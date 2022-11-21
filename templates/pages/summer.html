@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Austria Travel Website</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="/mysite/">Austria Travel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/mysite/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/mysite/activities/">Activities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/mysite/culture/">Culture</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/mysite/cities/">Cities</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5">
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://c.pxhere.com/photos/f2/fb/landscape_mountains_clouds_natural_blue_sky_lake_view_summer-789669.jpg!d" alt="..." /></div>
+                <div class="col-lg-7">
+                    <h1 class="font-weight-light">An Active Summer in Austria</h1>
+                    <p>Enjoy your summer in motion.</p>
+                    <p>: walking, hiking, cycling, diving, swimming and etc</p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Austria Travel 2022</p></div>
+        </footer>
+    </body>
+</html>
