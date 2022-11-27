@@ -3,6 +3,9 @@ from django.shortcuts import render
 def mainpage(request):
     return render(request, 'pages/mainpage.html')
 
+def company(request):
+    return render(request, 'pages/company_info.html')
+
 def activities(request):
     return render(request, 'pages/activities.html')
 

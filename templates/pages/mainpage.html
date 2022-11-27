@@ -6,8 +6,14 @@
 </head>
 <body>
 <nav>
-<a href="/mysite/">Austria Travel Website</a>
+    <a href="/company/">company info</a>
+    <a href="/mysite/">Austria Travel Website</a>
+    {% if user.is_authenticated %}
+     <li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">{{ user.username }} (logout)</a></li>
+     {% else %}
+     <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">login</a></li>
+     {% endif %}
 </nav>
-<h1>Test용 메인 페이지입니다.</h1>
+<h1>메인 페이지입니다.</h1>
 </body>
 </html>
