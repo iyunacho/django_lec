@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>메인 페이지</title>
-</head>
+{% extends 'base.html' %}
+{% block content %}
+
 <body>
 <nav>
     <a href="/company/">company info</a>
@@ -14,6 +11,26 @@
      <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">login</a></li>
      {% endif %}
 </nav>
-<h1>메인 페이지입니다.</h1>
+<h1>test용 메인 페이지입니다.</h1>
 </body>
-</html>
+<section class="mb-5">
+  <div class="card bg-light">
+    <div class="card-body">
+      <form method="post" class="mb-4" action="">">
+        {% csrf_token %}
+        <textarea id="content" name="content" class="form-control" rows="3" placeholder="내용을 입력해주세요."></textarea>
+        <button type="submit" class="btn btn-primary">submit</button>
+      </form>
+      {% for comment in content_list.comment_set.all %}
+      <div class="d-flex">
+        <div class="ms-3">
+          <div class="fw-bold">{{ comment.author.username }} &nbsp&nbsp {{ comment.create_date }}</div>
+          {{ comment.content }}
+        </div>
+      </div>
+      <br/>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
